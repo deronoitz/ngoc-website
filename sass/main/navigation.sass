@@ -12,10 +12,16 @@ nav
         padding-left: 0
     #top-tools
       a
-        padding: 0 5px
+        margin: 0 5px
+        i
+          font-size: 1.325rem
+          padding: 3px 0
+        &:hover
+          background: $secondary-color
+          color: white
       li:last-child
         a
-          padding-right: 0
+          margin-right: 0
   .middle
     padding: 23px 0
     img
@@ -42,5 +48,7 @@ nav
         &::before
           width: 100%
     li.active
-      a::before
-        width: 100%
+      a
+        color: $secondary-color
+      // a::before
+      //   width: 100%
