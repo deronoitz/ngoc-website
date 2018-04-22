@@ -1,42 +1,61 @@
 'use strict';
 
-var bgWrapper = $('.indexPage .bg-wrapper img');
-function getRandomFloat(min, max) {
-  return Math.random() * (max - min) + min;
-}
-var randomOpacity = function randomOpacity(el) {
-  var randomNumber = getRandomFloat(0.1, .50);
-  // var randomNumber = getRandomFloat(.35, .50);
-  TweenLite.to(el, .1, { css: { opacity: randomNumber }, ease: Power2.easeInOut });
+var changeNavbar = function changeNavbar() {
+  var scroll = window.scrollY;
+  var getTop = document.querySelector('nav > .top');
+  var getMiddle = document.querySelector('nav > .middle');
+  var navHeight = getTop.clientHeight + getMiddle.clientHeight;
+  var target = document.querySelector('nav');
+  if (scroll >= navHeight) {
+    target.classList.add('minified');
+    target.style.transform = "translateY(-" + navHeight + "px)";
+  } else {
+    target.classList.remove('minified');
+    target.style.transform = "translateY(0)";
+  }
+};
+var getNavHeight = function getNavHeight() {
+  var nav = document.querySelector('nav').clientHeight;
+  document.getElementById('ngoc-app').style.marginTop = nav + "px";
 };
 
-$(document).ready(function () {
-  $('.indexPage .bg-wrapper').parallax();
-  $('.characterPage .bg-wrapper').parallax();
-
-  new TypeIt('#indexType', {
-    strings: ["Have we been here? Have we met before? I don’t know", "Right now maybe our future self watching over us through memories", "Am i alive ? Are we all alive ? Are we real ? We don’t know", "Right now maybe our another self watching over us through reality..."],
-    speed: 50,
-    autoStart: false
-  });
-
-  setInterval(function () {
-    randomOpacity(bgWrapper);
-  }, 120);
+window.addEventListener('scroll', function () {
+  changeNavbar();
 });
-'use strict';
+"use strict";
 
-var t = document.querySelector('.toggleButton button#toggleNav');
-var n = document.getElementById('sideNavigation');
+var parallax = function parallax(el, d) {
+  var item, scroll, height;
+  if (document.getElementById(el) != null) {
+    item = document.getElementById(el);
+    scroll = window.scrollY;
+    height = document.body.clientHeight;
+    setTimeout(function () {
+      item.setAttribute("style", "transform: translate" + d + "(-" + scroll * .2 + "px)");
+    }, 10);
+  }
+};
 
-t.addEventListener('click', function (e) {
-
-  if (t.getAttribute("data-toggle") == 0) {
-    t.setAttribute('data-toggle', '1');
-
-    TweenLite.to(n, .275, { css: { transform: "translateX(265px)" }, ease: Power2.easeInOut });
+var touchElement = function touchElement(el) {
+  var scroll = window.scrollY;
+  var l = document.getElementById(el);
+  var elTop = l.getBoundingClientRect().top;
+  var screenHeight = window.innerHeight;
+  var out = elTop - screenHeight;
+  if (out <= 0) {
+    return true;
   } else {
-    t.setAttribute('data-toggle', '0');
-    TweenLite.to(n, .275, { css: { transform: "translateX(0px)" }, ease: Power2.easeInOut });
+    return false;
+  }
+};
+
+window.addEventListener('scroll', function () {
+  parallax('banner-top', 'Y');
+  // parallax('banner-footer', 'Y');
+  if (touchElement('banner-footer')) {
+    document.getElementById('banner-footer').classList.add('add');
+    document.querySelector('.banner.collection-footer').classList.add('add');
+  } else {
+    document.getElementById('banner-footer').classList.remove('add');
   }
 });
