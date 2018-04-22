@@ -26,3 +26,55 @@ h3
   max-width: 1010px
   width: 100%
   margin: 0 auto
+.separator
+  max-width: 628px
+  height: 2px
+  background: rgba(#000, .8)
+  width: 100%
+  margin: 35px 0
+
+span.text-small
+  font-size: 12px
+  font-style: italic
+
+.quote
+  h4
+    letter-spacing: 1.5px
+    font-size: 18px
+    text-align: center
+    font-weight: 400
+    padding: 60px 0
+    line-height: 2
+    position: relative
+    &::before, &::after
+      content: ''
+      height: 30px
+      width: 40px
+      position: absolute
+      left: calc(50% - 20px)
+      background-repeat: no-repeat
+    &::before
+      background-image: url('../assets/quote-open.png')
+      top: 0
+
+    &::after
+      background-image: url('../assets/quote-close.png')
+      bottom: 0
+
+.btn
+  text-transform: uppercase
+  color: white
+  padding: 15px
+  background-color: #ddd
+  display: inline-block
+  letter-spacing: 1.5px
+  font-size: 16px
+  text-align: center
+  transition: background-color .2s ease
+  &.btn-primary
+    background-color: $secondary-color
+    &:hover
+      background-color: #80181b
+  &.big
+    max-width: 445px
+    width: 100%
