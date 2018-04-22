@@ -5,7 +5,7 @@ var parallax = function(el, d){
     scroll = window.scrollY;
     height = document.body.clientHeight;
     setTimeout(function(){
-      item.setAttribute("style", "transform: translate"+d+"(-"+scroll*.2+"px)");
+      item.setAttribute("style", "transform: translate"+d+"(-"+scroll*.05+"px)");
     }, 10);
   }
 
