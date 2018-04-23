@@ -11,6 +11,8 @@ var parallax = function(el, d){
 
 }
 
+
+
 var touchElement = function(el){
   var scroll = window.scrollY;
   var l = document.getElementById(el);
@@ -36,3 +38,12 @@ window.addEventListener('scroll', function(){
   }
 
 })
+document.onreadystatechange = function () {
+   if (document.readyState == "complete") {
+     // document is ready. Do your stuff here
+     document.getElementById('preload').classList.add('hide');
+     setTimeout(function(){
+       document.getElementById('preload').remove();
+     }, 500)
+   }
+}

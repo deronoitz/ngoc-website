@@ -82,3 +82,42 @@ span.text-small
 #ngoc-app
   background-image: url('../assets/pattern.jpg')
   // margin-top: 180px
+.preload#preload
+  position: fixed
+  width: 100%
+  background: white
+  z-index: 999
+  height: 100vh
+  transition: all .5s ease
+  &.hide
+    opacity: 0
+    pointer-events: none
+    visibility: hidden
+  img
+    max-height: 65vh
+    mix-blend-mode: luminosity
+    animation-name: imgAnimation
+    animation-duration: .5s
+    animation-timing-function: ease
+    animation-fill-mode: forwards
+  h1
+    position: relative
+    animation-name: textAnimation
+    animation-duration: .5s
+    animation-timing-function: ease
+    animation-fill-mode: forwards
+@keyframes imgAnimation
+  from
+    opacity: 0
+    transform: translateX(0)
+  to
+    transform: translateX(-20%)
+    opacity: 1
+
+@keyframes textAnimation
+  from
+    opacity: 0
+    transform: translateX(-100%)
+  to
+    opacity: 1
+    transform: translateX(10%)
