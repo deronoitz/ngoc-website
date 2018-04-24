@@ -39,13 +39,15 @@ var parallax = function parallax(el, d) {
 var touchElement = function touchElement(el) {
   var scroll = window.scrollY;
   var l = document.getElementById(el);
-  var elTop = l.getBoundingClientRect().top;
-  var screenHeight = window.innerHeight;
-  var out = elTop - screenHeight;
-  if (out <= 0) {
-    return true;
-  } else {
-    return false;
+  if (l) {
+    var elTop = l.getBoundingClientRect().top;
+    var screenHeight = window.innerHeight;
+    var out = elTop - screenHeight;
+    if (out <= 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 };
 
@@ -56,7 +58,9 @@ window.addEventListener('scroll', function () {
     document.getElementById('banner-footer').classList.add('add');
     document.querySelector('.banner.collection-footer').classList.add('add');
   } else {
-    document.getElementById('banner-footer').classList.remove('add');
+    if (document.getElementById('banner-footer')) {
+      document.getElementById('banner-footer').classList.remove('add');
+    }
   }
 });
 document.onreadystatechange = function () {
