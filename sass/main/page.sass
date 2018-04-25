@@ -38,14 +38,18 @@
     margin: 20px
     margin-top: 30px
   p
-    font-size: 16px
+    font-size: 14px
     text-align: center
     line-height: 2
     // max-width: 810px
     max-width: 810px
     color: $dark
+    &.full
+      max-width: none
     &.wide
       max-width: 900px
+    &.left
+      text-align: left
   h3
     text-transform: uppercase
     letter-spacing: 2px
@@ -57,6 +61,8 @@
   .line-handler
     position: relative
     margin-bottom: 20px
+    &.no-margin
+      margin-bottom: 0
     &::before, &::after
       content: ''
       height: 2px
@@ -142,3 +148,71 @@ section#our-journey
   padding-bottom: 100px
   h1.hand
     text-align: center
+section#about-1
+  padding-top: 140px
+  img#logo-sketch
+    margin: 24px
+  #a1-img
+    width: calc(370 / 954 * 100%)
+    height: auto
+    align-self: flex-start
+  #a1-content
+    max-width: 465px
+    h3
+      font-size: 24px
+      text-align: center
+      margin-top: 20px
+  div#a2-img
+    height: 280px
+    overflow: hidden
+    position: relative
+    margin-bottom: 55px
+    img
+      width: 100%
+      transform: translateY(-28%)
+  #a3-img
+    max-width: 460px
+    align-self: center
+  .title-con
+    max-width: 420px
+    width: 100%
+    text-align: center
+  #a3-text
+    margin-top: 85px
+    h3
+      // font-size: 24px
+    p
+      padding: 0
+  #a4-img
+    width: 100%
+    mix-blend-mode: multiply
+    margin-top: 50px
+  div#a5-img
+    width: 780px
+    height: 395px
+    overflow: hidden
+    margin-top: 50px
+    margin-bottom: 30px
+    img
+      width: 100%
+      transform: translateY(-18%)
+  #a6-img
+    width: 550px
+    height: 338px
+  #a7-img
+    width: 397px
+    height: 582px
+  #a6
+    margin-top: 100px
+    & > div
+      max-width: 550px
+      div:last-child
+        height: 244px
+        p
+          max-width: 420px
+  #a6-img, #a7-img
+    overflow: hidden
+    position: relative
+    img
+      width: 100%
+      object-fit: cover
