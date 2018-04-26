@@ -288,3 +288,33 @@ section#new-product
       width: 100%
       height: 100%
       object-fit: cover
+
+
+section.news-content
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  .img-holder
+    height: 457px
+    overflow: hidden
+  .text, p
+    text-align: left
+  .text
+    max-width: 440px
+    padding: 0 72px
+  span.text-small
+    margin-bottom: 15px
+    display: inline-block
+
+.news-list
+  padding: 55px 0
+  &:last-child
+    padding-bottom: 150px
+  &:nth-child(odd)
+    & > .col-half:first-child
+      order: 2
+    & > .col-half:last-child
+      justify-content: flex-end
+      .text, p
+        text-align: right
