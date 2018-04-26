@@ -150,9 +150,8 @@ span.text-small
     visibility: hidden
   img
     max-height: 65vh
-    mix-blend-mode: luminosity
     animation-name: imgAnimation
-    animation-duration: .5s
+    animation-duration: 5s
     animation-timing-function: ease
     animation-fill-mode: forwards
   h1
@@ -162,10 +161,10 @@ span.text-small
     animation-timing-function: ease
     animation-fill-mode: forwards
 @keyframes imgAnimation
-  from
+  0%
     opacity: 0
     transform: translateX(0)
-  to
+  100%
     transform: translateX(-20%)
     opacity: 1
 
