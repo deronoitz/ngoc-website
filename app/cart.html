@@ -66,7 +66,7 @@
 			<div class="bottom">
 				<div class="container">
 					<ul class="f f-r f-btw">
-						<li class="active">
+						<li>
 							<a href="/">Home</a>
 						</li>
 						<li>
@@ -95,101 +95,112 @@
 
 
 		<div class="page" id="ngoc-app">
-			<div class="banner big">
-				<img src="assets/banner-homepage.jpg" alt="" id="banner-top">
-			</div>
-
-			<div class="main-content">
-				<section class="f f-c f-ctr mdl full-height">
-					<h1 class="hand">New items everyday</h1>
-					<p class="wide">We are trying to bing you the best products with high quality and quantity. Therefore, we shall create new products each day for you to have the best choice. It is our hope that, for how much love we give it in a piece's making, it shall once again receive in equal amount of love from those who use and collect it.</p>
-					<br><br>
-					<a href="#" class="btn btn-primary big">Shop Online Now</a>
-				</section>
-				<br>
-				<section class="f f-ctr mdl full-height">
-					<div class="pattern-show f f-r f-btw">
-						<div class="pattern-content">
-							<img src="assets/pattern1.jpg" alt="">
-						</div>
-						<div class="pattern-content">
-							<img src="assets/pattern2.jpg" alt="">
-						</div>
-						<div class="pattern-content">
-							<img src="assets/pattern3.jpg" alt="">
-						</div>
-						<div class="pattern-content">
-							<img src="assets/pattern4.jpg" alt="">
+				<div class="main-content cart">
+					<section class="cart-main container">
+						<div class="header-title">
+							<h3 class="center">Your cart</h3>
 						</div>
 
-						<a href="#" class="see-more">See more</a>
-					</div>
-				</section>
-				<br><br><br><br>
-				<section class="f f-ctr mdl full-height quote-2" id="quote-section">
-					<p>We passionately endeavour to unearth the true beauty of Vietnamese fabric traditions to the world. Fabric with great love and care by our dedicated artisans, fabric honour the nation’s most beautiful crafts as unique manifestations of centuries of antique Vietnamese tradition and contemporary refinement. With our own hands, we make all fabric you need in every day life, and to them we add a touch of timeless beauty.</p>
-				</section>
+						<table class="cart">
+							<thead>
+								<tr>
+									<th colspan="2"></th>
+									<th>QUANTITY</th>
+									<th width="200px">TOTAL</th>
+								</tr>
+							</thead>
+							<tbody>
 
-				<section class="f f-c full-height" id="mesinjahit">
-					<div class="container f f-ctr mdl">
-						<div class="f f-ctr mdl img-holder">
-							<img src="assets/mesinjahit.jpg" alt="">
-							<div class="text">
-								<h3 class="hand normal">Hanoi and our inspiration</h3>
-								<div class="f f-r">
-									<p>Starting with a great passion for the traditional culture of Viet Nam.</p>
-									<p>For the past one year, we have found a community for ourselves that we are proud to call family. Together we have shared great adventures around Vietnam through many collections that draw inspiration from local stories. And each of our products was meant to carry all of the culture values that VanHoa has been building for over a year.</p>
-								</div>
+								<tr>
+									<td width="190px">
+										<div class="pad">
+											<div class="img-holder">
+												<img src="assets/cart1.jpg" alt="">
+												<div class="f f-ctr mdl">
+													<a href="#" class="btn btn-secondary s-small">remove</a>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="pad f">
+											<h4>Gấm lụa Mã Châu</h4>
+										</div>
+									</td>
+									<td>
+										<div class="pad">
+											<input type="number" value="1" min="0" onchange="updatePriceCart(this)" bp="20">
+										</div>
+									</td>
+									<td>
+										<div class="pad">
+											<h3>$20.00</h3>
+										</div>
+									</td>
+								</tr>
 
-							</div>
+								<tr>
+									<td width="190px">
+										<div class="pad">
+											<div class="img-holder">
+												<img src="assets/cart2.jpg" alt="">
+												<div class="f f-ctr mdl">
+													<a href="#" class="btn btn-secondary s-small">remove</a>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="pad f">
+											<h4>Gấm Phường Nhược Công</h4>
+										</div>
+									</td>
+									<td>
+										<div class="pad">
+											<input type="number" value="1" min="0" onchange="updatePriceCart(this)" bp="20">
+										</div>
+									</td>
+									<td>
+										<div class="pad">
+											<h3>$20.00</h3>
+										</div>
+									</td>
+								</tr>
+
+								<tr class="sum">
+									<td colspan="2"></td>
+									<td>
+										<div class="pad">
+											<p>Subtotal</p>
+										</div>
+									</td>
+									<td>
+										<div class="pad">
+											<h3>$40.00</h3>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2"></td>
+									<td colspan="2">
+										<p class="no-margin right">
+											Shipping, taxes, and discounts calculated at checkout.
+											<br>
+											Orders will be processed in USD.
+										</p>
+									</td>
+
+								</tr>
+							</tbody>
+
+						</table>
+						<br>
+						<div class="f f-rht button-group">
+							<a href="#" class="btn btn-primary">Update cart</a>
+							<a href="#" class="btn btn-primary">Check out</a>
 						</div>
-
-					</div>
-				</section>
-
-				<section class="f f-ctr mdl" id="our-creative">
-					<div class="container f f-rht">
-
-						<div class="float-box">
-							<h2 class="hand">Our creative</h2>
-							<p>"Our audience is young fashion designers who love traditional culture of Vietnam and want to express it through fashion."</p>
-
-							<span class="tag">#tiemvanhoa</span>
-						</div>
-					</div>
-				</section>
-				<section class="f f-ctr mdl f-c full-height" id="our-journey">
-					<div class="container">
-						<h1 class="hand">Our Journey</h1>
-						<div class="f f-r f-w f-btw">
-							<div class="f f-c card-global">
-								<div class="img-holder">
-									<img src="assets/card1.jpg" alt="">
-								</div>
-								<span class="time">Apr 19, 2018</span>
-								<p class="text-card">Tiệm Vạn Hoa kết hợp cùng Thủy design house trong bộ sưu tập Cô Ba Sài Gòn</p>
-							</div>
-
-							<div class="f f-c card-global">
-								<div class="img-holder">
-									<img src="assets/card2.jpg" alt="">
-								</div>
-								<span class="time">Apr 19, 2018</span>
-								<p class="text-card">Tiệm Vạn Hoa kết hợp cùng Thủy design house trong bộ sưu tập Cô Ba Sài Gòn</p>
-							</div>
-
-							<div class="f f-c card-global">
-								<div class="img-holder">
-									<img src="assets/card3.jpg" alt="">
-								</div>
-								<span class="time">Apr 19, 2018</span>
-								<p class="text-card">Tiệm Vạn Hoa kết hợp cùng Thủy design house trong bộ sưu tập Cô Ba Sài Gòn</p>
-							</div>
-						</div>
-
-					</div>
-				</section>
-			</div>
+					</section>
+				</div>
 
 		</div>
 

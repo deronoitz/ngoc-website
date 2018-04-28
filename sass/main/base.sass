@@ -16,7 +16,16 @@ a
   display: block
 p
   font-family: $content-font
-
+  &.right
+    text-align: right
+input[type="number"]
+  outline: none
+  border: solid 1px $secondary-color
+  padding: 8px 12px
+  max-width: 46px
+  font-size: 17px
+  font-family: $content-font
+  background-color: rgba(#fff, .6)
 h1, h2, h3, h4, h5, h6
   margin: 0
   &.center
@@ -126,6 +135,10 @@ span.text-small
   font-size: 16px
   text-align: center
   transition: background-color .2s ease
+  &.btn-secondary
+    background-color: #000
+    &:hover
+      background: $secondary-color
   &.btn-primary
     background-color: $secondary-color
     &:hover
@@ -143,7 +156,10 @@ span.text-small
     width: 100%
   &.small
     padding: 8px 25px
-
+  &.s-small
+    padding: 8px 20px
+    font-size: 13px
+    letter-spacing: 0
 #ngoc-app
   background-image: url('../assets/pattern.jpg')
   // margin-top: 180px
@@ -213,3 +229,77 @@ section.full-height
 .col-half
   width: 50%
   min-width: 50%
+
+table
+  width: 100%
+  table-layout: auto
+  border-collapse: collapse
+  thead
+    tr th
+      border-bottom: solid 2px $fourth-color
+      padding: 10px 0
+  th
+    text-transform: uppercase
+    font-weight: 400
+    letter-spacing: 1px
+    font-size: 14px
+  &.cart
+    .sum
+      td
+        border-top: solid 2px $fourth-color
+      .pad
+        padding: 22px 0
+        padding-bottom: 0
+    h4
+      font-size: 17px
+      font-weight: 400
+      text-align: left
+      display: inline-block
+      &:hover
+        color: $secondary-color
+        cursor: pointer
+        text-decoration: underline
+    h3
+      font-size: 20px
+      margin: 0
+    .img-holder
+      width: 165px
+      height: 165px
+      position: relative
+      &:hover
+        & > div
+          opacity: 1
+        a.btn
+          transform: translateY(0)
+          opacity: 1
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      & > div
+        position: absolute
+        height: 100%
+        width: 100%
+        background: rgba(#fff, .5)
+        top: 0
+        left: 0
+        opacity: 0
+        transition: all .3s ease
+      a.btn
+        transform: translateY(20px)
+        opacity: 0
+        transition-delay: .2s
+        transition: all .325s ease
+    .pad
+      padding: 0px 0 44px
+    tr:first-child
+      .pad
+        padding-top: 22px
+    td
+      text-align: center
+
+.button-group
+  .btn
+    margin: 0 15px
+    &:last-child
+      margin-right: 0
