@@ -114,7 +114,9 @@ xmlhttp.onreadystatechange = function() {
         for (var i = 0; i < myObj.countries.country.length; i++) {
           var country = myObj.countries.country[i].countryName;
           var html = "<option value="+country+">"+country+"</option>";
-          document.getElementById('countryForm').insertAdjacentHTML("beforeend", html) ;
+          if(document.getElementById('countryForm')){
+            document.getElementById('countryForm').insertAdjacentHTML("beforeend", html) ;
+          }
 
         }
     }
