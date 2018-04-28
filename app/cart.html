@@ -96,109 +96,249 @@
 
 		<div class="page" id="ngoc-app">
 				<div class="main-content cart">
-					<section class="cart-main container">
-						<div class="header-title">
-							<h3 class="center">Your cart</h3>
+					<section class="cart-main container" step-holder="0">
+
+						<div class="review-sec" data-step="0">
+
+							<div class="header-title">
+								<h3 class="center">Your cart</h3>
+							</div>
+
+							<table class="cart">
+								<thead>
+									<tr>
+										<th colspan="2"></th>
+										<th>QUANTITY</th>
+										<th width="200px">TOTAL</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									<tr>
+										<td width="190px">
+											<div class="pad">
+												<div class="img-holder">
+													<img src="assets/cart1.jpg" alt="">
+													<div class="f f-ctr mdl">
+														<a href="#" class="btn btn-secondary s-small">remove</a>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="pad f">
+												<h4>Gấm lụa Mã Châu</h4>
+											</div>
+										</td>
+										<td>
+											<div class="pad">
+												<input type="number" value="1" min="0" onchange="updatePriceCart(this)" bp="20">
+											</div>
+										</td>
+										<td>
+											<div class="pad">
+												<h3>$20.00</h3>
+											</div>
+										</td>
+									</tr>
+
+									<tr>
+										<td width="190px">
+											<div class="pad">
+												<div class="img-holder">
+													<img src="assets/cart2.jpg" alt="">
+													<div class="f f-ctr mdl">
+														<a href="#" class="btn btn-secondary s-small">remove</a>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="pad f">
+												<h4>Gấm Phường Nhược Công</h4>
+											</div>
+										</td>
+										<td>
+											<div class="pad">
+												<input type="number" value="1" min="0" onchange="updatePriceCart(this)" bp="20">
+											</div>
+										</td>
+										<td>
+											<div class="pad">
+												<h3>$20.00</h3>
+											</div>
+										</td>
+									</tr>
+
+									<tr class="sum">
+										<td colspan="2"></td>
+										<td>
+											<div class="pad">
+												<p>Subtotal</p>
+											</div>
+										</td>
+										<td>
+											<div class="pad">
+												<h3>$40.00</h3>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2"></td>
+										<td colspan="2">
+											<p class="no-margin right">
+												Shipping, taxes, and discounts calculated at checkout.
+												<br>
+												Orders will be processed in USD.
+											</p>
+										</td>
+
+									</tr>
+								</tbody>
+
+							</table>
+							<br>
+							<div class="f f-rht button-group">
+								<a href="#" class="btn btn-primary">Update cart</a>
+								<a href="javascript:void(0)" class="btn btn-primary" onclick="cartStepForward(this)">Check out</a>
+							</div>
+
 						</div>
 
-						<table class="cart">
-							<thead>
-								<tr>
-									<th colspan="2"></th>
-									<th>QUANTITY</th>
-									<th width="200px">TOTAL</th>
-								</tr>
-							</thead>
-							<tbody>
+						<div class="f f-r steps-cart hidden" data-step="1">
+							<div class="forms-cart">
+								<div class="logo-img">
+									<img src="assets/logosketch.png" alt="">
+								</div>
 
-								<tr>
-									<td width="190px">
-										<div class="pad">
-											<div class="img-holder">
+								<div class="breadcrumb">
+									<ul class="f f-r mdl">
+										<li>
+											<a href="#">Cart</a>
+										</li>
+										<li>></li>
+										<li class="active">
+											<a href="#">Customer information</a>
+										</li>
+										<li>></li>
+										<li>
+											<a href="#">Shipping method</a>
+										</li>
+										<li>></li>
+										<li>
+											<a href="#">Payment Method</a>
+										</li>
+									</ul>
+								</div>
+
+								<br><br>
+								<div class="form">
+									<p class="left no-margin">Contact information</p>
+
+									<input type="text" name="" value="" placeholder="Email or mobile phone number">
+									<div class="checkbox f f-r mdl">
+										<div class="cb">
+											<input type="checkbox" name="" value="">
+											<div class="check"></div>
+										</div>
+										<p class="left">Keep me up to date on news and exclusive offers</p>
+									</div>
+
+									<br><br>
+									<p class="left no-margin">Shipping address</p>
+									<div class="f f-r group">
+										<input type="text" name="" value="" placeholder="First name (optional)">
+										<input type="text" name="" value="" placeholder="Last name">
+									</div>
+									<div class="f f-r group">
+										<input type="text" name="" value="" placeholder="Address">
+										<input type="text" name="" value="" placeholder="Apt, suite (optional)">
+									</div>
+									<select class="" name="" required>
+										<option value="" selected disabled hidden>City</option>
+										<option value="">Gayamsari</option>
+									</select>
+									<div class="f f-r group">
+										<select class="" name="" required id="countryForm">
+											<option value="" selected disabled hidden>Country</option>
+
+										</select>
+										<input type="text" name="" value="" placeholder="Postal code">
+									</div>
+									<div class="checkbox f f-r mdl">
+										<div class="cb">
+											<input type="checkbox" name="" value="">
+											<div class="check"></div>
+										</div>
+										<p class="left">Save this information for next time</p>
+									</div>
+								</div>
+								<br><br><br>
+								<div class="f f-r f-btw mdl">
+									<a href="javascript:void(0)" class="btn-third" onclick="cartStepPrevious(this)">< Return to cart</a>
+									<a href="#" class="btn btn-primary">Continue to shipping method</a>
+								</div>
+
+							</div>
+
+							<div class="summary">
+								<ul class="f f-c">
+									<li class="f f-btw">
+										<div class="f f-r mdl">
+											<div class="img-fabric">
 												<img src="assets/cart1.jpg" alt="">
-												<div class="f f-ctr mdl">
-													<a href="#" class="btn btn-secondary s-small">remove</a>
-												</div>
+												<span class="qty">2</span>
 											</div>
+											<p>Gấm lụa Mã Châu</p>
 										</div>
-									</td>
-									<td>
-										<div class="pad f">
-											<h4>Gấm lụa Mã Châu</h4>
-										</div>
-									</td>
-									<td>
-										<div class="pad">
-											<input type="number" value="1" min="0" onchange="updatePriceCart(this)" bp="20">
-										</div>
-									</td>
-									<td>
-										<div class="pad">
-											<h3>$20.00</h3>
-										</div>
-									</td>
-								</tr>
+										<p class="price">$20.00</p>
+									</li>
 
-								<tr>
-									<td width="190px">
-										<div class="pad">
-											<div class="img-holder">
+									<li class="f f-btw">
+										<div class="f f-r mdl">
+											<div class="img-fabric">
 												<img src="assets/cart2.jpg" alt="">
-												<div class="f f-ctr mdl">
-													<a href="#" class="btn btn-secondary s-small">remove</a>
-												</div>
 											</div>
+											<p>Gấm phường Nhược Công</p>
 										</div>
-									</td>
-									<td>
-										<div class="pad f">
-											<h4>Gấm Phường Nhược Công</h4>
-										</div>
-									</td>
-									<td>
-										<div class="pad">
-											<input type="number" value="1" min="0" onchange="updatePriceCart(this)" bp="20">
-										</div>
-									</td>
-									<td>
-										<div class="pad">
-											<h3>$20.00</h3>
-										</div>
-									</td>
-								</tr>
+										<p class="price">$20.00</p>
+									</li>
 
-								<tr class="sum">
-									<td colspan="2"></td>
-									<td>
-										<div class="pad">
-											<p>Subtotal</p>
-										</div>
-									</td>
-									<td>
-										<div class="pad">
-											<h3>$40.00</h3>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td colspan="2"></td>
-									<td colspan="2">
-										<p class="no-margin right">
-											Shipping, taxes, and discounts calculated at checkout.
-											<br>
-											Orders will be processed in USD.
-										</p>
-									</td>
+									<li>
+										<div class="separator a-margin"></div>
+									</li>
 
-								</tr>
-							</tbody>
+									<li class="f f-btw price-li">
+										<p>Subtotal</p>
+										<p class="price">$40.00</p>
+									</li>
+									<li class="f f-btw price-li">
+										<p>Shipping</p>
+										<p class="price">-</p>
+									</li>
 
-						</table>
-						<br>
-						<div class="f f-rht button-group">
-							<a href="#" class="btn btn-primary">Update cart</a>
-							<a href="#" class="btn btn-primary">Check out</a>
+									<li class="f f-btw price-li">
+										<p>Taxes</p>
+										<p class="price">$4.00</p>
+									</li>
+
+									<li>
+										<div class="separator a-margin"></div>
+									</li>
+
+									<li class="f f-btw mdl price-li">
+										<p>Total</p>
+										<div class="f f-r mdl">
+											<span>USD</span>
+											<h3>$44.00</h3>
+										</div>
+									</li>
+
+								</ul>
+							</div>
 						</div>
+
+
 					</section>
 				</div>
 

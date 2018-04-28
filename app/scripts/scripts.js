@@ -92,3 +92,51 @@ var updatePriceCart = function updatePriceCart(e) {
   var total = allVal.reduce(getSum);
   document.querySelector('.cart tr.sum h3').textContent = "$" + total + ".00";
 };
+function findAncestor(el, cls) {
+  while ((el = el.parentElement) && !el.hasAttribute(cls)) {}
+  return el;
+}
+
+var cartStepForward = function cartStepForward(e) {
+  var currentStep = findAncestor(e, "data-step").getAttribute("data-step") * 1;
+  var nextStep = currentStep + 1;
+  document.querySelector("*[data-step='" + currentStep + "']").classList.add('hidden');
+  document.querySelector("*[data-step='" + nextStep + "']").classList.remove('hidden');
+  document.querySelector("*[step-holder='" + currentStep + "']").setAttribute('step-holder', nextStep);
+
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+};
+
+var cartStepPrevious = function cartStepPrevious(e) {
+  var currentStep = findAncestor(e, "data-step").getAttribute("data-step") * 1;
+  var prevStep = currentStep - 1;
+  document.querySelector("*[data-step='" + currentStep + "']").classList.add('hidden');
+  document.querySelector("*[data-step='" + prevStep + "']").classList.remove('hidden');
+  document.querySelector("*[step-holder='" + currentStep + "']").setAttribute('step-holder', prevStep);
+
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+};
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+
+    for (var i = 0; i < myObj.countries.country.length; i++) {
+      var country = myObj.countries.country[i].countryName;
+      var html = "<option value=" + country + ">" + country + "</option>";
+      document.getElementById('countryForm').insertAdjacentHTML("beforeend", html);
+    }
+  }
+};
+xmlhttp.open("GET", "scripts/country.json", true);
+// xmlhttp.open("GET", "https://cors.io/?http://country.io/names.json", true);
+xmlhttp.send();

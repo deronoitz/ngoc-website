@@ -47,6 +47,9 @@
     // max-width: 810px
     max-width: 810px
     color: $dark
+    &.no-margin
+      margin-bottom: 5px
+
     &.full
       max-width: none
     &.wide
@@ -331,3 +334,61 @@ section.cart-main
   background: #fff
   .header-title
     padding: 90px 0 50px
+
+.logo-img
+  max-width: 50px
+  margin-bottom: 10px
+  img
+    width: 100%
+.steps-cart
+  padding-top: 60px
+.forms-cart
+  max-width: calc(60% - 50px)
+  width: 100%
+  padding-right: 50px
+  border-right: solid 2px #cecece
+.summary
+  max-width: calc(40% - 50px)
+  width: 100%
+  padding-left: 50px
+  li
+    padding: 15px 0
+    &.price-li
+      padding: 0
+      p
+        margin: 0
+      h3
+        margin: 0
+      span
+        font-size: 12px
+        margin-right: 15px
+
+  p.price
+    font-weight: 600
+.img-fabric
+  position: relative
+  width: 55px
+  height: 55px
+  margin-right: 20px
+  img
+    width: 55px
+    height: 55px
+    object-fit: cover
+  span.qty
+    position: absolute
+    background: #000
+    height: 22px
+    width: 22px
+    color: white
+    top: -12px
+    font-size: 11px
+    right: -12px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+
+section.cart-main
+  & > div.hidden
+    // opacity: 0
+    display: none
