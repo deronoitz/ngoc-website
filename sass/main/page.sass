@@ -2,10 +2,29 @@
   max-height: 330px
   overflow: hidden
   background: #000
+  &.product-catalog
+    max-height: 425px
+    position: relative
+    &::after
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      top: 0
+      z-index: 2
+      background: rgba(#000, .65)
   &.big
     max-height: 683px
   &.top
     max-height: 510px
+  h2
+    font-size: 60px
+    position: absolute
+    top: 275px
+    text-align: center
+    width: 100%
+    color: #fff
+    z-index: 3
   img
     width: 100%
   &.collection-footer
@@ -403,3 +422,132 @@ section.cart-main
   & > div.hidden
     // opacity: 0
     display: none
+.thumb-product
+  width: calc(100% - 240px)
+  margin-left: 18px
+  margin-bottom: 50px
+  h4
+    text-transform: uppercase
+    letter-spacing: 0
+  .body
+    padding-top: 15px
+  .head
+    background: #2a2f32
+    height: 60px
+    padding: 0 15px
+    a
+      color: white
+      i
+        font-size: 32px
+    select
+      min-width: 280px
+      margin-left: 25px
+    h4
+      color: white
+      white-space: nowrap
+
+.filter-product
+  background: $third-color
+  width: 258px
+  align-self: flex-start
+  .filter-section
+    margin-bottom: 30px
+  a.btn
+    max-width: 178px
+  h4
+    text-transform: uppercase
+  .body
+    padding: 25px 15px
+    border-bottom: solid 10px #2a2f32
+    h4
+      margin-bottom: 15px
+    .checkbox p
+      line-height: 2!important
+      position: relative
+      top: 1px
+  .head
+    padding: 20px 15px
+    background: #2a2f32
+    h4
+      color: white
+
+.product-card
+  width: calc(100% / 3 - 16px)
+  box-sizing: border-box
+  margin: 8px 8px 25px
+  position: relative
+  &.has-label
+    &::after
+      content: attr(data-label)
+      position: absolute
+      top: 24px
+      right: -2px
+      font-size: 12px
+      transform: rotateZ(90deg)
+      color: white
+      z-index: 3
+      letter-spacing: 1px
+    &::before
+      content: ''
+      background: $secondary-color
+      height: 60px
+      width: 28px
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 2
+  p
+    margin: 0
+    font-size: 12px
+    line-height: normal
+    &.sub
+      font-weight: 700
+      font-style: italic
+      margin-bottom: 5px
+
+  ul.color-scheme
+    margin: 10px 0 14px
+    li
+      height: 5px
+      width: 23px
+      background-color: #cecece
+      margin: 0 5px
+      display: block
+  .img-holder
+    position: relative
+    height: 230px
+    overflow: hidden
+    &:hover
+      & > .hover
+        opacity: 1
+        border: solid 5px $secondary-color
+        height: 220px
+        width: calc(100% - 10px)
+      a.btn
+        transform: translateY(0)
+        opacity: 1
+      img
+        transform: scale(1.2)
+    a.btn
+      min-width: 160px
+      letter-spacing: 0
+      margin: 5px 0
+      transform: translateY(20px)
+      opacity: 0
+      transition-delay: .2s
+      transition: all .325s ease
+    .hover
+      position: absolute
+      height: 100%
+      width: 100%
+      top: 0
+      left: 0
+      background: rgba(#fff, .5)
+      // background: rgba(#000, .5)
+      opacity: 0
+      transition: opacity .3s ease
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: transform 10s ease

@@ -65,6 +65,9 @@ h3.hand
 h3
   font-size: 24px
   font-weight: 700
+  &.light
+    font-weight: 400
+    letter-spacing: 0px!important
   &.red
     color: $secondary-color
   &.smaller
@@ -73,6 +76,8 @@ h4
   font-size: 16px
   letter-spacing: 1px
   // text-transform: uppercase
+  &.red
+    color: $secondary-color
 .container
   max-width: 1010px
   width: 100%
@@ -148,7 +153,7 @@ span.text-small
     text-decoration: underline
 .btn
   text-transform: uppercase
-  color: white
+  color: #222
   padding: 15px
   box-sizing: border-box
   background-color: #ddd
@@ -160,9 +165,11 @@ span.text-small
 
   &.btn-secondary
     background-color: #000
+    color: white
     &:hover
       background: $secondary-color
   &.btn-primary
+    color: white
     background-color: $secondary-color
     &:hover
       background-color: #80181b
@@ -361,6 +368,8 @@ input[type="text"], select, textarea
   font-size: 14px
   box-sizing: border-box
   letter-spacing: .5px
+  &.small
+    padding: 8px 15px
   &:focus
     border-color: $secondary-color
 ::-webkit-input-placeholder
@@ -457,3 +466,19 @@ option
       color: #aaa
       font-size: 12px
       letter-spacing: 1px
+
+.pagination
+  width: 100%
+  margin: 20px 0
+  li
+    margin: 0 3px
+    &.active
+      a
+        background: $secondary-color
+    a
+      padding: 10px 15px
+      background: #2a2f32
+      color: white
+      font-size: 12px
+      &:hover
+        background: $secondary-color
