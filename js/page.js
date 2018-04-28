@@ -46,6 +46,8 @@ window.addEventListener('scroll', function(){
 document.onreadystatechange = function () {
    if (document.readyState == "complete") {
      // document is ready. Do your stuff here
+     console.log("Website by Reverse Project (http://www.reverse-project.com)");
+     // console.log("http://www.reverse-project.com");
      document.getElementById('preload').classList.add('hide');
      setTimeout(function(){
        document.getElementById('preload').remove();
