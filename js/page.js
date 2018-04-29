@@ -11,6 +11,19 @@ var parallax = function(el, d){
 
 }
 
+var thumbImage = function(e){
+  var imgUrl = e.querySelector('img').getAttribute('src');
+  var imgTarget = document.querySelectorAll('.big-img .imgReplace');
+  var imgThumb = document.querySelectorAll('.thumb-img li');
+  for (var i = 0; i < imgTarget.length; i++) {
+    imgTarget[i].classList.remove('active');
+    imgThumb[i].classList.remove('active');
+
+  }
+  var curTarget = document.querySelector("img.imgReplace[src='"+imgUrl+"']");
+  curTarget.classList.add('active');
+  e.classList.add('active');
+}
 
 
 var touchElement = function(el){

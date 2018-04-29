@@ -20,7 +20,7 @@
   h2
     font-size: 60px
     position: absolute
-    top: 275px
+    top: 290px
     text-align: center
     width: 100%
     color: #fff
@@ -181,7 +181,7 @@ section#our-journey
   h1.hand
     text-align: center
 section#about-1
-  padding-top: 140px
+  padding-top: 70px
   img#logo-sketch
     margin: 24px
   #a1-img
@@ -255,7 +255,11 @@ section#about-1
   margin-top: 60px
   & > div
     width: calc(100% / 4)
-    padding: 10px
+    padding: 8px
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
   .img-holder
     height: 222px
     width: 100%
@@ -278,6 +282,7 @@ section#sec-choosen
     width: calc(100% / 3)
   div.image
     overflow: hidden
+    height: 250px
     img
       width: 100%
       height: 100%
@@ -288,7 +293,7 @@ section#sec-choosen
     p
       max-width: 200px
       line-height: 1.6
-      margin: 20px 0 20px
+      margin: 12px 0 20px
     // padding: 30px 40px
     // text-align: center
 section#popular
@@ -300,7 +305,7 @@ section#new-product
     margin-top: 70px
     margin-bottom: 60px
     & > div
-      padding: 8px
+      padding: 10px
     h3
       font-size: 20px
       letter-spacing: 0
@@ -435,6 +440,11 @@ section.cart-main
     background: #2a2f32
     height: 60px
     padding: 0 15px
+    .sort-by
+      position: relative
+    .arrow-down
+      position: absolute
+      right: 10px
     a
       color: white
       i
@@ -445,7 +455,11 @@ section.cart-main
     h4
       color: white
       white-space: nowrap
-
+img#sketch-collection
+  width: 100%
+  mix-blend-mode: multiply
+img#sketch-collection-2
+  max-width: 912px
 .filter-product
   background: $third-color
   width: 258px
@@ -470,7 +484,13 @@ section.cart-main
     background: #2a2f32
     h4
       color: white
-
+.product-4col
+  .product-card
+    width: calc(100% / 4 - 12px)
+    &:first-child
+      margin-left: 0
+    &:nth-child(4n)
+      margin-right: 0
 .product-card
   width: calc(100% / 3 - 16px)
   box-sizing: border-box
@@ -551,3 +571,111 @@ section.cart-main
     height: 100%
     object-fit: cover
     transition: transform 10s ease
+.detail-product
+  margin: 30px 0 75px
+
+  &.white
+    background: #fff
+    padding: 50px 35px
+  .detail-content
+    width: calc(653 / 1142 * 100%)
+    padding-left: 60px
+    .size
+      margin: 20px 0 30px
+    p
+      font-size: 13px
+    .arrow-down
+      position: absolute
+      right: 10px
+      bottom: 10px
+    select
+      margin: 0
+      padding: 5px 15px
+      color: $secondary-color
+      option
+        color: $secondary-color
+    h4
+      margin-bottom: 5px
+      letter-spacing: 0
+    .Service
+      width: calc(100% - 261px)
+      position: relative
+    .colors
+      width: 261px
+      li
+        height: 20px
+        width: 20px
+        background: #cecece
+        margin: 0 4px
+        &:first-child
+          margin-left: 0
+    h1
+      text-transform: uppercase
+      font-weight: 400
+      line-height: 1
+      color: $secondary-color
+      &.price
+        color: #000
+        span
+          font-style: normal
+          font-size: 20px
+          color: $secondary-color
+          font-weight: 400
+      span
+        font-size: 12px
+        text-transform: none
+        color: #000
+        font-style: italic
+        font-weight: 700
+    p.sub
+      margin: 0
+      font-style: italic
+      font-weight: 700
+      font-size: 12px
+  .detail-image
+    width: calc(490 / 1142 * 100%)
+    .big-img
+      height: 323px
+      overflow: hidden
+      position: relative
+      img
+        position: absolute
+        opacity: 0
+        transition: opacity .4s ease
+        &.active
+          opacity: 1
+    .thumb-img
+      margin: 10px 0 0
+      li
+        margin: 0 5px
+        background: #fff
+        position: relative
+        cursor: pointer
+        height: 94px
+        overflow: hidden
+        &:hover
+          img
+            opacity: 1
+        &.active
+          &:after
+            content: ''
+            position: absolute
+            width: calc(100% - 10px)
+            height: calc(100% - 10px)
+            border: solid 5px $secondary-color
+            top: 0
+            left: 0
+
+          img
+            opacity: 1
+        img
+          opacity: .5
+          transition: opacity .2s ease
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover

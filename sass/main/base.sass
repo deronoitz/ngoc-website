@@ -50,10 +50,12 @@ h1, h2, h3, h4, h5, h6
   font-weight: normal
   color: $secondary-color
 h1.hand
-  font-size: 90px
+  font-size: 72px
 h2.hand
   font-size: 50px
   line-height: 1
+h2.title-light
+  font-weight: 400
 h3.hand
   font-size: 40px
   line-height: 1em
@@ -149,8 +151,15 @@ span.text-small
   display: inline-block
 .btn-third
   color: #000
+  &.red
+    color: $secondary-color
   &:hover
     text-decoration: underline
+
+.has-border-bottom
+  border-bottom: solid 2px $secondary-color
+  padding: 10px 0
+  margin: 12px 0
 .btn
   text-transform: uppercase
   color: #222
@@ -180,7 +189,9 @@ span.text-small
     text-transform: none
     letter-spacing: .5px
     font-size: 14px
-
+  &.full
+    max-width: 100%
+    width: 100%
   &.big
     max-width: 445px
     width: 100%
@@ -356,6 +367,49 @@ table
       margin-right: 5px
     input:last-child, select:last-child
       margin-left: 5px
+.relative
+  position: relative
+  .arrow-down
+    position: absolute
+    right: 20px
+    top: 26px
+.arrow-down
+  width: 0
+  height: 0
+  border-left: 8px solid transparent
+  border-right: 8px solid transparent
+  pointer-events: none
+  border-top: 8px solid $secondary-color
+
+.progress-bar
+  position: relative
+  height: 3px
+  width: 100%
+  background: #dedede
+  margin: 25px 0
+  &::before
+    content: attr(min)
+    position: absolute
+    top: -20px
+    left: 0
+    font-size: 12px
+  &::after
+    content: attr(max)
+    position: absolute
+    top: -20px
+    right: 0
+    font-size: 12px
+  .now
+    position: absolute
+    height: 100%
+    background: $secondary-color
+    &::after
+      content: attr(currentValue)
+      position: absolute
+      top: -20px
+      color: $secondary-color
+      font-size: 12px
+      right: -15px
 
 input[type="text"], select, textarea
   padding: 13px 15px
