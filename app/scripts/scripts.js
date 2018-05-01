@@ -65,14 +65,15 @@ var touchElement = function touchElement(el) {
 };
 
 window.addEventListener('scroll', function () {
-  parallax('banner-top', 'Y');
+  // parallax('banner-top', 'Y');
   // parallax('banner-footer', 'Y');
   if (touchElement('banner-footer')) {
-    document.getElementById('banner-footer').classList.add('add');
-    document.querySelector('.banner.collection-footer').classList.add('add');
+    // document.getElementById('banner-footer').classList.add('add')
+    // document.querySelector('.banner.collection-footer').classList.add('add')
   } else {
     if (document.getElementById('banner-footer')) {
-      document.getElementById('banner-footer').classList.remove('add');
+      // document.getElementById('banner-footer').classList.remove('add')
+
     }
   }
 });

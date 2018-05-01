@@ -57,11 +57,53 @@ nav
       max-width: 64px
   .bottom
     transition: background .2s ease
+
+    li
+      position: relative
+      .dropdown-menu
+        position: absolute
+        top: 100%
+        background: $secondary-color
+        width: 100%
+        display: none
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15)
+
+        li
+          width: 100%
+          box-sizing: border-box
+          padding: 0 10px
+
+          &:hover
+            background: $third-color
+            a
+              background: $third-color
+              color: #7a8184
+          &:last-child
+            a
+              border-bottom: 0
+        li a
+          color: #fff
+          white-space: nowrap
+          font-size: 12px
+          font-weight: 400!important
+          padding: 14px 0px
+          text-align: center
+          border-bottom: solid 1px #fff
+          &::before
+            display: none
+
+    li
+      &:hover
+        .dropdown-menu
+          display: block
+        a
+          &::before
+            width: 100%
     a
       text-transform: uppercase
       color: rgba(black, .9)
       letter-spacing: 1px
-      padding: 0 10px
+      padding: 0 35px
       padding-top: 20px
       padding-bottom: 15px
       position: relative
@@ -76,9 +118,7 @@ nav
         width: 0
         background: $secondary-color
         transition: all .2s ease
-      &:hover
-        &::before
-          width: 100%
+
     li.active
       a
         color: $secondary-color
@@ -114,6 +154,16 @@ footer
   ul.social
     li
       margin: 0 10px
+      display: flex
+      align-items: center
+      &:nth-child(2)
+        a
+          font-size: 24px
+      &:nth-child(3)
+        a
+          font-size: 32px
+          position: relative
+          top: 2px
     a
       color: #fff
       font-size: 28px

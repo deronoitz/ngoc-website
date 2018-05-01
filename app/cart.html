@@ -45,6 +45,10 @@
 							<a href="#">
 								<i class="material-icons">search</i>
 							</a>
+							<!-- <div class="search-bar">
+								<input type="text" name="" value="">
+								<a href="#" class="btn btn-primary">Search</a>
+							</div> -->
 						</li>
 						<li>
 							<a href="/cart.html">
@@ -64,22 +68,46 @@
 			</div>
 
 			<div class="bottom">
-				<div class="container">
+				<div class="container header">
 					<ul class="f f-r f-btw">
 						<li>
 							<a href="/">Home</a>
 						</li>
 						<li>
 							<a href="/catalog.html">Catalog</a>
+							<div class="dropdown-menu">
+								<ul class="f f-c f-ctr mdl">
+									<li>
+										<a href="/catalog.html">Overview</a>
+									</li>
+									<li>
+										<a href="/product.html">All Products</a>
+									</li>
+								</ul>
+							</div>
 						</li>
 						<li>
 							<a href="/collection.html">Collection</a>
+							<div class="dropdown-menu">
+								<ul class="f f-c f-ctr mdl">
+									<li>
+										<a href="/collection.html">DỆT NÊN TRIỀU ĐẠI</a>
+									</li>
+									<li>
+										<a href="/collection.html">CÔ BA SÀI GÒN</a>
+									</li>
+								</ul>
+							</div>
 						</li>
 						<li>
 							<a href="/about-us.html">About Us</a>
 						</li>
 						<li>
 							<a href="/news.html">News</a>
+						</li>
+
+						<li>
+							<a href="/kind-words.html">Kind Words</a>
 						</li>
 
 						<li>
@@ -281,7 +309,7 @@
 								<br><br><br>
 								<div class="f f-r f-btw mdl">
 									<a href="javascript:void(0)" class="btn-third" onclick="cartStepPrevious(this)">< Return to cart</a>
-									<a href="#" class="btn btn-primary">Continue to shipping method</a>
+									<a href="javascript:void(0)" class="btn btn-primary" onclick="cartStepForward(this)">Continue to shipping method</a>
 								</div>
 
 							</div>
@@ -343,6 +371,267 @@
 							</div>
 						</div>
 
+						<div class="f f-r steps-cart hidden" data-step="2">
+							<div class="forms-cart">
+								<div class="logo-img">
+									<img src="assets/logosketch.png" alt="">
+								</div>
+
+								<div class="breadcrumb">
+									<ul class="f f-r mdl">
+										<li>
+											<a href="#">Cart</a>
+										</li>
+										<li>></li>
+										<li>
+											<a href="#">Customer information</a>
+										</li>
+										<li>></li>
+										<li class="active">
+											<a href="#">Shipping method</a>
+										</li>
+										<li>></li>
+										<li>
+											<a href="#">Payment Method</a>
+										</li>
+									</ul>
+								</div>
+
+								<br><br>
+								<div class="form">
+
+									<div class="form-tipu">
+										<ul>
+											<li class="f f-r f-btw mdl">
+												<div class="first f">
+													<p>Contact</p>
+													<p>+84 96 822 57 50</p>
+												</div>
+												<a href="#" class="btn-third">Change</a>
+											</li>
+											<li class="f f-r f-btw mdl">
+												<div class="first f">
+													<p>Ship to</p>
+													<p>80 Trúc Khê, Đống Đa, Hà Nội, Việt Nam</p>
+												</div>
+												<a href="#" class="btn-third">Change</a>
+											</li>
+										</ul>
+									</div>
+									<br><br><br>
+									<p class="left no-margin">Shipping method</p>
+									<div class="form-tipu">
+										<ul>
+											<li class="f f-btw mdl">
+												<div class="f mdl">
+													<div class="radio">
+														<input type="radio" name="" value="" checked>
+														<div class="check"></div>
+													</div>
+													&nbsp;&nbsp;&nbsp;
+													<p>Standard Shipping</p>
+												</div>
+												<p>$10.00</p>
+											</li>
+										</ul>
+									</div>
+
+
+								</div>
+								<br><br><br>
+								<div class="f f-r f-btw mdl">
+									<a href="javascript:void(0)" class="btn-third" onclick="cartStepPrevious(this)">< Return to customer information</a>
+									<a href="javascript:void(0)" class="btn btn-primary" onclick="cartStepForward(this)">Continue to payment method</a>
+								</div>
+
+							</div>
+
+							<div class="summary">
+								<ul class="f f-c">
+									<li class="f f-btw">
+										<div class="f f-r mdl">
+											<div class="img-fabric">
+												<img src="assets/cart1.jpg" alt="">
+												<span class="qty">2</span>
+											</div>
+											<p>Gấm lụa Mã Châu</p>
+										</div>
+										<p class="price">$20.00</p>
+									</li>
+
+									<li class="f f-btw">
+										<div class="f f-r mdl">
+											<div class="img-fabric">
+												<img src="assets/cart2.jpg" alt="">
+											</div>
+											<p>Gấm phường Nhược Công</p>
+										</div>
+										<p class="price">$20.00</p>
+									</li>
+
+									<li>
+										<div class="separator a-margin"></div>
+									</li>
+
+									<li class="f f-btw price-li">
+										<p>Subtotal</p>
+										<p class="price">$40.00</p>
+									</li>
+									<li class="f f-btw price-li">
+										<p>Shipping</p>
+										<p class="price">-</p>
+									</li>
+
+									<li class="f f-btw price-li">
+										<p>Taxes</p>
+										<p class="price">$4.00</p>
+									</li>
+
+									<li>
+										<div class="separator a-margin"></div>
+									</li>
+
+									<li class="f f-btw mdl price-li">
+										<p>Total</p>
+										<div class="f f-r mdl">
+											<span>USD</span>
+											<h3>$44.00</h3>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+
+						<div class="f f-r steps-cart hidden" data-step="3">
+							<div class="forms-cart">
+								<div class="logo-img">
+									<img src="assets/logosketch.png" alt="">
+								</div>
+
+								<div class="breadcrumb">
+									<ul class="f f-r mdl">
+										<li>
+											<a href="#">Cart</a>
+										</li>
+										<li>></li>
+										<li>
+											<a href="#">Customer information</a>
+										</li>
+										<li>></li>
+										<li >
+											<a href="#">Shipping method</a>
+										</li>
+										<li>></li>
+										<li class="active">
+											<a href="#">Payment Method</a>
+										</li>
+									</ul>
+								</div>
+
+								<br><br>
+								<div class="form">
+
+									<div class="form-tipu">
+										<ul>
+											<li class="f f-r f-btw mdl">
+												<div class="first f">
+													<p>Contact</p>
+													<p>+84 96 822 57 50</p>
+												</div>
+												<a href="#" class="btn-third">Change</a>
+											</li>
+											<li class="f f-r f-btw mdl">
+												<div class="first f">
+													<p>Ship to</p>
+													<p>80 Trúc Khê, Đống Đa, Hà Nội, Việt Nam</p>
+												</div>
+												<a href="#" class="btn-third">Change</a>
+											</li>
+
+											<li class="f f-r f-btw mdl">
+												<div class="first f">
+													<p>Method</p>
+													<p>Standard Shipping $10.00</p>
+												</div>
+												<a href="#" class="btn-third">Change</a>
+											</li>
+										</ul>
+									</div>
+									<br><br><br>
+									<p class="left no-margin">Payment method</p>
+									<br>
+									<div class="f f-ctr f-c mdl warning">
+										<img src="assets/warning.png" alt="">
+										<p class="sub">No payment gateway currently configured</p>
+									</div>
+									<br><br><br>
+
+									<div class="f f-r f-btw mdl">
+										<a href="javascript:void(0)" class="btn-third" onclick="cartStepPrevious(this)">< Return to shipping information</a>
+										<a href="javascript:void(0)" class="btn disabled" disabled>Place order</a>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="summary">
+								<ul class="f f-c">
+									<li class="f f-btw">
+										<div class="f f-r mdl">
+											<div class="img-fabric">
+												<img src="assets/cart1.jpg" alt="">
+												<span class="qty">2</span>
+											</div>
+											<p>Gấm lụa Mã Châu</p>
+										</div>
+										<p class="price">$20.00</p>
+									</li>
+
+									<li class="f f-btw">
+										<div class="f f-r mdl">
+											<div class="img-fabric">
+												<img src="assets/cart2.jpg" alt="">
+											</div>
+											<p>Gấm phường Nhược Công</p>
+										</div>
+										<p class="price">$20.00</p>
+									</li>
+
+									<li>
+										<div class="separator a-margin"></div>
+									</li>
+
+									<li class="f f-btw price-li">
+										<p>Subtotal</p>
+										<p class="price">$40.00</p>
+									</li>
+									<li class="f f-btw price-li">
+										<p>Shipping</p>
+										<p class="price">-</p>
+									</li>
+
+									<li class="f f-btw price-li">
+										<p>Taxes</p>
+										<p class="price">$4.00</p>
+									</li>
+
+									<li>
+										<div class="separator a-margin"></div>
+									</li>
+
+									<li class="f f-btw mdl price-li">
+										<p>Total</p>
+										<div class="f f-r mdl">
+											<span>USD</span>
+											<h3>$44.00</h3>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
 
 					</section>
 				</div>
