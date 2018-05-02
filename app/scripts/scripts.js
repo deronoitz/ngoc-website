@@ -49,6 +49,18 @@ var thumbImage = function thumbImage(e) {
   e.classList.add('active');
 };
 
+var callSearch = function callSearch(e) {
+  var parent = e.closest('li');
+  parent.querySelector('input').focus();
+  parent.querySelector('input').select();
+
+  parent.classList.add('active');
+};
+
+var removeSearch = function removeSearch(e) {
+  var parent = e.closest('li');
+  parent.classList.remove('active');
+};
 var touchElement = function touchElement(el) {
   var scroll = window.scrollY;
   var l = document.getElementById(el);
@@ -77,6 +89,7 @@ window.addEventListener('scroll', function () {
     }
   }
 });
+
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     // document is ready. Do your stuff here

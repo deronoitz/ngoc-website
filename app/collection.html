@@ -32,7 +32,11 @@
 
 					<ul class="f f-r" id="top-tools">
 						<li>
-							<a href="#">
+							<div class="f mdl search-bar">
+								<a href="javascript:void(0)" onclick="removeSearch(this)"><i class="material-icons">close</i></a>
+								<input type="text" name="" value="" placeholder="Search for products" autofocus>
+							</div>
+							<a href="javascript:void(0)" onclick="callSearch(this)" class="caller">
 								<i class="material-icons">search</i>
 							</a>
 						</li>

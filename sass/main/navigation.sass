@@ -30,6 +30,50 @@ nav
     min-height: 36px
     li, a
       color: $secondary-color
+      position: relative
+    li
+      &.active
+        .search-bar
+          display: block
+        .caller
+          background: $secondary-color
+          color: #fff
+          border-radius: 0 3px 3px 0
+      .search-bar
+        position: absolute
+        width: 280px
+        right: 5px
+        height: 100%
+        display: none
+        &:hover
+          a
+            // visibility: visible
+        a
+          // visibility: hidden
+          position: absolute
+          &:hover
+            background: transparent!important
+            color: $secondary-color!important
+        input
+          padding: 7px 40px
+          // padding-left: 40px
+          border: none
+          background: rgba(255, 255, 255, 0.4)
+          font-size: 12px
+          // border-bottom: solid 2px #bbb
+          padding-bottom: 5px
+          margin: 0
+          // margin-top: 7px
+          &:focus
+            // border-color: $secondary-color
+        ::-webkit-input-placeholder
+          font-size: 12px
+        ::-moz-placeholder
+          font-size: 12px
+        :-ms-input-placeholder
+          font-size: 12px
+        :-moz-placeholder
+          font-size: 12px
     a
       padding: 0 3px
     #lang-select li:first-child
