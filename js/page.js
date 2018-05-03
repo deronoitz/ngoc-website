@@ -75,6 +75,10 @@ document.onreadystatechange = function () {
      // document is ready. Do your stuff here
      console.log("Website by Reverse Project (http://www.reverse-project.com)");
      // console.log("http://www.reverse-project.com");
+     console.log('%c       ',
+     'font-size: 150px; background-image: url(https://d33wubrfki0l68.cloudfront.net/de105fd41bbdb1901c6c955b64de0a9b01371bab/9f078/assets/ngoc.jpg); background-size: contain; backround-repeat: no-repeat;');
+     console.log("MANTUL")
+
      document.getElementById('preload').classList.add('hide');
      setTimeout(function(){
        document.getElementById('preload').remove();
