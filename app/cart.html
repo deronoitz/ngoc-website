@@ -153,7 +153,7 @@
 										</td>
 										<td>
 											<div class="pad f">
-												<h4>Gấm lụa Mã Châu</h4>
+												<h4>Gam lua Ma Chau</h4>
 											</div>
 										</td>
 										<td>
@@ -181,7 +181,7 @@
 										</td>
 										<td>
 											<div class="pad f">
-												<h4>Gấm Phường Nhược Công</h4>
+												<h4>Gam Phuong Nhuoc Cong</h4>
 											</div>
 										</td>
 										<td>
@@ -225,7 +225,7 @@
 							</table>
 							<br>
 							<div class="f f-rht button-group">
-								<a href="#" class="btn btn-primary">Update cart</a>
+								<a href="/product.html" class="btn btn-primary">Update cart</a>
 								<a href="javascript:void(0)" class="btn btn-primary" onclick="cartStepForward(this)">Check out</a>
 							</div>
 
@@ -322,7 +322,7 @@
 												<img src="assets/cart1.jpg" alt="">
 												<span class="qty">2</span>
 											</div>
-											<p>Gấm lụa Mã Châu</p>
+											<p>Gam lua Ma Chau</p>
 										</div>
 										<p class="price">$20.00</p>
 									</li>
@@ -332,7 +332,7 @@
 											<div class="img-fabric">
 												<img src="assets/cart2.jpg" alt="">
 											</div>
-											<p>Gấm phường Nhược Công</p>
+											<p>Gam Phuong Nhuoc Cong</p>
 										</div>
 										<p class="price">$20.00</p>
 									</li>
@@ -403,18 +403,21 @@
 									<div class="form-tipu">
 										<ul>
 											<li class="f f-r f-btw mdl">
-												<div class="first f">
+												<div class="first f mdl">
 													<p>Contact</p>
-													<p>+84 96 822 57 50</p>
+													<input type="text" name="" value="" class="special" placeholder="Phone Number" onkeydown="dataSend(this)" data-send="phone">
+													<!-- <p>+84 96 822 57 50</p> -->
 												</div>
-												<a href="#" class="btn-third">Change</a>
+												<a href="javascript:void(0)" onclick="clearText(this)" class="btn-third">Change</a>
 											</li>
 											<li class="f f-r f-btw mdl">
-												<div class="first f">
+												<div class="first f mdl">
 													<p>Ship to</p>
-													<p>80 Trúc Khê, Đống Đa, Hà Nội, Việt Nam</p>
+													<input type="text" name="" value="" class="special" placeholder="Shipping address" onkeydown="dataSend(this)" data-send="address">
+
+													<!-- <p>80 Trúc Khê, Đống Đa, Hà Nội, Việt Nam</p> -->
 												</div>
-												<a href="#" class="btn-third">Change</a>
+												<a href="javascript:void(0)" onclick="clearText(this)" class="btn-third">Change</a>
 											</li>
 										</ul>
 									</div>
@@ -454,7 +457,7 @@
 												<img src="assets/cart1.jpg" alt="">
 												<span class="qty">2</span>
 											</div>
-											<p>Gấm lụa Mã Châu</p>
+											<p>Gam lua Ma Chau</p>
 										</div>
 										<p class="price">$20.00</p>
 									</li>
@@ -464,7 +467,7 @@
 											<div class="img-fabric">
 												<img src="assets/cart2.jpg" alt="">
 											</div>
-											<p>Gấm phường Nhược Công</p>
+											<p>Gam Phuong Nhuoc Cong</p>
 										</div>
 										<p class="price">$20.00</p>
 									</li>
@@ -537,16 +540,16 @@
 											<li class="f f-r f-btw mdl">
 												<div class="first f">
 													<p>Contact</p>
-													<p>+84 96 822 57 50</p>
+													<p data-receive="phone">+84 96 822 57 50</p>
 												</div>
-												<a href="#" class="btn-third">Change</a>
+												<a href="javascript:void(0)" onclick="cartStepPrevious(this)" class="btn-third">Change</a>
 											</li>
 											<li class="f f-r f-btw mdl">
 												<div class="first f">
 													<p>Ship to</p>
-													<p>80 Trúc Khê, Đống Đa, Hà Nội, Việt Nam</p>
+													<p data-receive="address">80 Trúc Khê, Đống Đa, Hà Nội, Việt Nam</p>
 												</div>
-												<a href="#" class="btn-third">Change</a>
+												<a href="javascript:void(0)" onclick="cartStepPrevious(this)" class="btn-third">Change</a>
 											</li>
 
 											<li class="f f-r f-btw mdl">
@@ -554,7 +557,7 @@
 													<p>Method</p>
 													<p>Standard Shipping $10.00</p>
 												</div>
-												<a href="#" class="btn-third">Change</a>
+												<a href="javascript:void(0)" onclick="cartStepPrevious(this)" class="btn-third">Change</a>
 											</li>
 										</ul>
 									</div>
@@ -584,7 +587,7 @@
 												<img src="assets/cart1.jpg" alt="">
 												<span class="qty">2</span>
 											</div>
-											<p>Gấm lụa Mã Châu</p>
+											<p>Gam lua Ma Chau</p>
 										</div>
 										<p class="price">$20.00</p>
 									</li>
@@ -594,7 +597,7 @@
 											<div class="img-fabric">
 												<img src="assets/cart2.jpg" alt="">
 											</div>
-											<p>Gấm phường Nhược Công</p>
+											<p>Gam Phuong Nhuoc Cong</p>
 										</div>
 										<p class="price">$20.00</p>
 									</li>
@@ -718,7 +721,9 @@
 						</div>
 					</div>
 				</div>
-
+				<div class="f f-ctr mdl">
+					<span class="copyright">© COPYRIGHTS WEBSITE 2018 BY VAN HOA FABRIC INC.</span>
+				</div>
 			</div>
 		</footer>
 

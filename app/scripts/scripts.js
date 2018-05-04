@@ -36,6 +36,23 @@ var parallax = function parallax(el, d) {
   }
 };
 
+var clearText = function clearText(e) {
+  var target = e.closest('li').querySelector('input');
+  var dataID = target.getAttribute('data-send');
+  document.querySelector("p[data-receive='" + dataID + "']").textContent = "";
+  target.value = "";
+  target.focus();
+};
+
+var dataSend = function dataSend(e) {
+  var dataID = e.getAttribute('data-send');
+  var val = e.value;
+
+  var target = document.querySelector("p[data-receive='" + dataID + "']");
+  target.textContent = val;
+  // console.log(dataID, val);
+};
+
 var thumbImage = function thumbImage(e) {
   var imgUrl = e.querySelector('img').getAttribute('src');
   var imgTarget = document.querySelectorAll('.big-img .imgReplace');

@@ -434,12 +434,17 @@ input[type="text"], select, textarea
     padding: 8px 15px
   &:focus
     border-color: $secondary-color
+  &.special
+    padding: 0
+    margin: 0
+    border: none
+    width: 100%
 ::-webkit-input-placeholder
   font-family: $content-font
   font-size: 14px
   letter-spacing: .5px
 
-::-moz-placeholder 
+::-moz-placeholder
   font-family: $content-font
   font-size: 14px
   letter-spacing: .5px
@@ -549,6 +554,8 @@ option
   border: solid 1px #bbb
   padding: 0 13px
   box-sizing: border-box
+  .first
+    width: 100%
   li
     padding: 13px 0
     border-bottom: solid 1px #bbb
