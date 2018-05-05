@@ -174,20 +174,21 @@ var cartStepPrevious = function cartStepPrevious(e) {
   });
 };
 
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-
-    for (var i = 0; i < myObj.countries.country.length; i++) {
-      var country = myObj.countries.country[i].countryName;
-      var html = "<option value=" + country + ">" + country + "</option>";
-      if (document.getElementById('countryForm')) {
-        document.getElementById('countryForm').insertAdjacentHTML("beforeend", html);
-      }
-    }
-  }
-};
-xmlhttp.open("GET", "scripts/country.json", true);
-// xmlhttp.open("GET", "https://cors.io/?http://country.io/names.json", true);
-xmlhttp.send();
+// var xmlhttp = new XMLHttpRequest();
+// xmlhttp.onreadystatechange = function() {
+//     if (this.readyState == 4 && this.status == 200) {
+//         var myObj = JSON.parse(this.responseText);
+//
+//         for (var i = 0; i < myObj.countries.country.length; i++) {
+//           var country = myObj.countries.country[i].countryName;
+//           var html = "<option value="+country+">"+country+"</option>";
+//           if(document.getElementById('countryForm')){
+//             document.getElementById('countryForm').insertAdjacentHTML("beforeend", html) ;
+//           }
+//
+//         }
+//     }
+// };
+// xmlhttp.open("GET", "scripts/country.json", true);
+// // xmlhttp.open("GET", "https://cors.io/?http://country.io/names.json", true);
+// xmlhttp.send();
